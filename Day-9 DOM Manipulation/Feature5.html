@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Event Handling</title>
+    <style>
+      .roboto-regular {
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 1.5rem;
+      }
+      .container {
+        max-width: 850px;
+        margin: 0 auto;
+        padding: 1em;
+      }
+      .text {
+        border: 2px solid red;
+        padding: 1em;
+        border-radius: 20px;
+        margin: 0.9em;
+      }
+      .box {
+        border: 2px solid green;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+        border: 1px solid black;
+        padding: 10px;
+        border-radius: 30px;
+        cursor: pointer;
+        user-select: none;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="text roboto-regular" id="textBox">
+        <p id="para">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+          asperiores optio sunt placeat voluptatum earum consectetur odit aut
+          mollitia sequi!
+        </p>
+      </div>
+      <a href="#" id="change_text">Change Text</a>
+    </div>
+  </body>
+  <script>
+    // Task-9
+    const text = document.getElementById("change_text");
+    text.addEventListener("click", () => {
+      document.getElementById("para").innerHTML =
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, recusandae.";
+    });
+
+    // Task-10
+    const hover = document.getElementById("textBox");
+    hover.addEventListener("mouseover", () => {
+      hover.setAttribute("class", "text roboto-regular box");
+    });
+    hover.addEventListener("mouseleave", () => {
+      hover.setAttribute("class", "text roboto-regular");
+    });
+  </script>
+</html>
