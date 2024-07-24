@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>KeyBoard Event</title>
+    <style>
+      .roboto-medium {
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+      }
+      #box {
+        text-align: center;
+        font-size: 2rem;
+      }
+      input {
+        border: 2px solid black;
+        height: 3rem;
+        font-size: 2rem;
+        padding: 0.5em;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box" class="roboto-medium">
+      <input type="text" name="" id="" />
+      <p id="down"></p>
+      <p id="up"></p>
+    </div>
+  </body>
+  <script>
+    // Task-5
+    const input = document.querySelector("input");
+    input.addEventListener("keydown", (e) => {
+      document.getElementById("down").innerHTML = `Key Down :  ${e.key}`;
+      console.log(e.key);
+    });
+
+    // TASK-6
+    input.addEventListener("keyup", (e) => {
+      document.getElementById("up").innerHTML = `Key UP :  ${e.key}`;
+    });
+  </script>
+</html>

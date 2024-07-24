@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Form Event</title>
+    <style>
+      .roboto-medium {
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+      }
+      .detail,
+      .option {
+        margin: 1em;
+        padding: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="#" class="roboto-medium detail">
+      <label for="firstName">First Name</label>
+      <input type="text" id="firstName" />
+      <label for="lastName">Last Name</label>
+      <input type="text" id="lastName" />
+      <input type="button" value="Submit" id="name" />
+      <p id="fullName"></p>
+    </form>
+    <form action="#" class="roboto-medium option">
+      <label for="langs">Choose your favourite Language:</label>
+      <select name="Languages" id="langs">
+        <option value="Java Script">Java Script</option>
+        <option value="Java">Java</option>
+        <option value="C++">C++</option>
+        <option value="Python">Python</option>
+      </select>
+      <br /><br />
+      <input type="submit" value="Submit" id="optionSubmit" />
+      <p id="lang"></p>
+    </form>
+  </body>
+  <script>
+    // Task-7
+    const btn = document.querySelector("#name");
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      const firstName = document.getElementById("firstName");
+      const lastName = document.getElementById("lastName");
+      const display = document.getElementById("fullName");
+      display.innerHTML = `<p>Hello ${firstName.value} ${lastName.value} </p>`;
+      firstName.value = "";
+      lastName.value = "";
+    });
+    // Task-8
+    const langbtn = document.querySelector("#optionSubmit");
+    langbtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      const lang = document.getElementById("langs").value;
+      const p = document.getElementById("lang");
+      p.innerHTML = `${lang} is the best Language.`;
+    });
+  </script>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Event Delegation</title>
+    <style>
+      .roboto-medium {
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 1.5rem;
+      }
+      .container {
+        max-width: 750px;
+        margin: 0 auto;
+      }
+      #add {
+        height: 1rem;
+        font-size: 1.5rem;
+        padding: 0.5em;
+      }
+      #addingColor {
+        padding: 1em;
+        border: 1px solid black;
+        border-radius: 20px;
+      }
+      ul {
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container roboto-medium">
+      <label for="add">Add more color in list</label>
+      <input type="text" id="add" />
+      <input type="button" value="Add Color" id="addingColor" />
+      <ul id="list">
+        <li>Red</li>
+        <li>Orange</li>
+        <li>White</li>
+        <li>Blue</li>
+        <li>Black</li>
+      </ul>
+      <p id="color"></p>
+    </div>
+    <script>
+      // TASK-9
+      const list = document
+        .getElementById("list")
+        .addEventListener("click", (e) => {
+          const item = e.target;
+          document.getElementById(
+            "color"
+          ).innerHTML = `You picked ${item.innerHTML}`;
+        });
+
+      //Task-10
+      const addBtn = document.getElementById("addingColor");
+      addBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        const color = document.getElementById("add");
+        let ul = document.getElementById("list");
+        const li = document.createElement("li");
+        li.innerHTML = `${color.value}`;
+        ul.appendChild(li);
+        color.value = "";
+      });
+    </script>
+  </body>
+</html>
