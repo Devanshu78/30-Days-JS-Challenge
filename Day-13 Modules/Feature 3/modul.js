@@ -1,5 +1,6 @@
-const sayHello = function () {
-  console.log(`Hello Devanshu.`);
-};
+const PII = 3.14;
+function circleArea(r) {
+  return PII * r * r;
+}
 
-export default sayHello;
+module.exports = { PII, circleArea };

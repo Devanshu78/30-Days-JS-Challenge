@@ -1,3 +1,4 @@
-import sayHello from "./modul.js";
+const constants = require("./modul.js");
 
-sayHello();
+console.log(constants.PII);
+console.log(constants.circleArea(3));
