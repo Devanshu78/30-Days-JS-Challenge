@@ -1,0 +1,19 @@
+{
+  "name": "feature1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Devanshu78/30-Days-JS-Challenge.git"
+  },
+  "author": "Devanshu Pandey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Devanshu78/30-Days-JS-Challenge/issues"
+  },
+  "homepage": "https://github.com/Devanshu78/30-Days-JS-Challenge#readme"
+}
