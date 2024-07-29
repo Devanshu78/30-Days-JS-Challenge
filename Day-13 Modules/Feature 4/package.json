@@ -1,0 +1,23 @@
+{
+  "name": "feature-4",
+  "version": "1.0.0",
+  "description": "using external package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Devanshu78/30-Days-JS-Challenge.git"
+  },
+  "author": "Devanshu Pandey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Devanshu78/30-Days-JS-Challenge/issues"
+  },
+  "homepage": "https://github.com/Devanshu78/30-Days-JS-Challenge#readme",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "lodash": "^4.17.21"
+  }
+}
