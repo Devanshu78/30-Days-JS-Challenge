@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local & Session Stroage</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-size: 1.25rem;
+      }
+      body {
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(31, 27, 27);
+        color: #fff;
+        padding: 1rem 1.5rem;
+      }
+      .btn {
+        padding: 0 1rem;
+      }
+      .sessbtn {
+        padding: 0 1rem;
+      }
+      h1 {
+        color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Task-1</h1>
+      <h3>String :: <span id="str"></span></h3>
+      <br />
+      <hr />
+      <br />
+      <h1>Task-2</h1>
+      <h3 id="objData">Object Data</h3>
+      <br />
+      <hr />
+      <br />
+      <h1>Task-3</h1>
+      <br />
+      <form method="post">
+        <label for="name">Name</label>
+        <input type="text" id="name" />
+        <label for="email">Email</label>
+        <input type="text" id="email" />
+        <input type="button" class="btn" value="Submit" />
+      </form>
+      <br />
+      <h3 id="show">Form Data</h3>
+      <br />
+      <hr />
+      <h1>Session Storage</h1>
+      <br />
+      <h1>Task-5</h1>
+      <h3>String :: <span id="sess_String"></span></h3>
+      <br />
+      <h1>Task-6</h1>
+      <h3 id="session_object">Session Data</h3>
+      <br />
+      <h1>Task-7</h1>
+      <form method="post">
+        <label for="Sname">Name</label>
+        <input type="text" id="Sname" />
+        <label for="Semail">Email</label>
+        <input type="text" id="Semail" />
+        <input type="button" class="sessbtn" value="Submit" />
+      </form>
+      <h3 id="showSessData">Session Form Data</h3>
+      <br />
+    </div>
+  </body>
+  <script src="./Tasks.js"></script>
+</html>
