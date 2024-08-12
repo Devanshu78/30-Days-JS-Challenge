@@ -1,4 +1,4 @@
-const apiId = "584be93958d203f862f6c0d024b9bc5b";
+const apiId = "😄";
 const city = document.getElementById("city");
 const search = document.getElementById("icon");
 const temp = document.getElementById("temp");
